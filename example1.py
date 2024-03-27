@@ -1,13 +1,10 @@
 ## Integrate our code OpenAI API
 import os
 from constants import openai_key
-from langchain.llms import OpenAI
-from langchain import PromptTemplate
-from langchain.chains import LLMChain
-
-from langchain.memory import ConversationBufferMemory
-
-from langchain.chains import SequentialChain
+from langchain_openai import OpenAI  # For using OpenAI's API with Langchain
+from langchain.prompts import PromptTemplate  # For creating prompt templates
+from langchain.chains import LLMChain, SequentialChain  # For building language model chains
+from langchain.memory import ConversationBufferMemory  # For storing conversation history
 
 import streamlit as st
 
